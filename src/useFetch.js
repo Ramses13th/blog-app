@@ -30,7 +30,7 @@ const useFetch = (url) => {
           setError(err.message);
         }
       })
-    }, 1000);
+    });
 
     // abort the fetch
     return () => abortCont.abort();
@@ -38,5 +38,5 @@ const useFetch = (url) => {
 
   return { data, isPending, error };
 }
- 
+
 export default useFetch;
